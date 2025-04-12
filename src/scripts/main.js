@@ -79,16 +79,16 @@ function displayNovels(novels, source) {
     html += `<tr class='col-3'><th>指標</th><th>前回値</th><th>今回値</th></tr>`;
 
     const fields = [
+      { key: "impression_cnt", label: "感想数" },
+      { key: "review_cnt", label: "レビュー数" },
+      { key: "all_hyoka_cnt", label: "評価者数" },
       { key: "all_point", label: "総合評価pt" },
+      { key: "fav_novel_cnt", label: "ブクマ数" },
       { key: "daily_point", label: "日間pt" },
       { key: "weekly_point", label: "週間pt" },
       { key: "monthly_point", label: "月間pt" },
       { key: "quarter_point", label: "四半期pt" },
-      { key: "yearly_point", label: "年間pt" },
-      { key: "fav_novel_cnt", label: "ブクマ数" },
-      { key: "impression_cnt", label: "感想数" },
-      { key: "review_cnt", label: "レビュー数" },
-      { key: "all_hyoka_cnt", label: "評価者数" }
+      { key: "yearly_point", label: "年間pt" }
     ];
 
     fields.forEach(({ key, label }) => {
@@ -109,23 +109,6 @@ function displayNovels(novels, source) {
   const username = novels[0].writer || "不明";
   usernameHeader.textContent = `${username} さんの小説評価`;
 }
-
-// footer.html を読み込む関数
-function loadFooter() {
-    fetch('./footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer').innerHTML = data;
-      })
-      .catch(error => console.error('Error loading footer:', error));
-  }
-  
-  // DOMContentLoaded イベントでフッターを挿入
-  document.addEventListener('DOMContentLoaded', () => {
-    loadFooter();
-  });
-
-
 
 function shareOnTwitter() {
     const pageTitle = document.title;
