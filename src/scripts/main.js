@@ -112,7 +112,7 @@ function displayNovels(novels, source) {
 
 // footer.html を読み込む関数
 function loadFooter() {
-    fetch('footer.html')
+    fetch('./footer.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('footer').innerHTML = data;
