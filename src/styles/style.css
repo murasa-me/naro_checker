@@ -1,5 +1,4 @@
-
-    body {
+body {
       background-color: #f5f5f5;
       padding: 20px;
       text-align: center;
@@ -16,11 +15,11 @@
     }
 
     .highlight {
-      background-color: #ff5f5f;
+      background-color: #ff9f9f !important; /* ハイライト色 (赤系) */
     }
 
     .lowlight {
-      background-color: #5a9eff;
+      background-color: #8ac3ff !important; /* ローライト色 (青系) */
     }
 
     .input-group {
@@ -40,4 +39,12 @@
 
     .col-3 th, .col-3 td {
       width: calc(100% / 3);
+    }
+
+    .table-striped tr:nth-of-type(odd) {
+      background-color: #f9f9f9; /* 交互の背景色 (薄いグレー) */
+    }
+
+    .table-striped tr:nth-of-type(even) {
+      background-color: #ffffff; /* 交互の背景色 (白) */
     }
