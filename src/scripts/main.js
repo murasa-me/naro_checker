@@ -6,6 +6,16 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded and parsed');
 });
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-63YCREESQE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-63YCREESQE');
+</script>
+
 // 入力値の保持
 window.onload = function () {
   document.getElementById("narouInput").value = localStorage.getItem("narouInput") || "";
