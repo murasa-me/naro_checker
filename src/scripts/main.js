@@ -79,10 +79,12 @@ function displayNovels(novels, source) {
     html += `<tr class='col-3'><th>指標</th><th>前回値</th><th>今回値</th></tr>`;
 
     const fields = [
+      { key: "length", label: "作品文字数" },
       { key: "impression_cnt", label: "感想数" },
       { key: "review_cnt", label: "レビュー数" },
+      { key: "global_point", label: "総合評価ポイント" },
       { key: "all_hyoka_cnt", label: "評価者数" },
-      { key: "all_point", label: "総合評価pt" },
+      { key: "all_point", label: "評価pt" },
       { key: "fav_novel_cnt", label: "ブクマ数" },
       { key: "daily_point", label: "日間pt" },
       { key: "weekly_point", label: "週間pt" },
